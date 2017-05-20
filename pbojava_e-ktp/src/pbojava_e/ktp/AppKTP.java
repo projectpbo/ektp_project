@@ -5,8 +5,15 @@ import javax.swing.RowFilter;
 import javax.swing.table.TableRowSorter;
 
 public class AppKTP extends javax.swing.JFrame {
-    
-    
+    ArrayList<DataKTP> RT1 = new ArrayList<>();
+    ArrayList<DataKTP> RT2 = new ArrayList<>();
+    ArrayList<DataKTP> RT3 = new ArrayList<>();
+    ArrayList<DataKTP> RT4 = new ArrayList<>();
+    ArrayList<DataKTP> rt_1 = new ArrayList<>();
+    ArrayList<DataKTP> rt_2 = new ArrayList<>();
+    ArrayList<DataKTP> rt_3 = new ArrayList<>();
+    ArrayList<DataKTP> rt_4 = new ArrayList<>();
+    DefaultTableModel dm;
    
     public AppKTP() {
         setTitle("e-KTP");
@@ -15,7 +22,18 @@ public class AppKTP extends javax.swing.JFrame {
         sort();
     }
     private void BuatKolom(){
-      
+      dm=(DefaultTableModel) jTable2.getModel();
+      dm.addColumn("Nama");
+      dm.addColumn("NIK");
+      dm.addColumn("TTL");
+      dm.addColumn("Alamat");
+      dm.addColumn("JenisKelamin");
+      dm.addColumn("RT/RW");
+      dm.addColumn("KELURAHAN");          
+      dm.addColumn("Agama");
+      dm.addColumn("Status");
+      dm.addColumn("Pekerjaan");
+      dm.addColumn("Kewarganegaraan");    
       
      }
      private void search (String query){
